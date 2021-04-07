@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Weekly Assignment 10</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/moon.min.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>Making a Slide Show with Reveal.js</h3>
+					<p style="color:#CFB87C; font-weight:bold;">Caden Bradbury</p>
+					<p style="color:#565A5C">Weekly Assignment 10</h5>
+				</section>
+
+
+				<section>
+					<h3>Introduction</h3>
+					<ul>
+						<li>This presenation is designed to show you some basic features of Reveal.js that I used to create this presentation. We will look at:</li>
+						<ul>
+							<li>Themes</li>
+							<li>Transitions</li>
+						</ul>
+						<li>This should help to make your presentations more appealing and talored to your style!</li>
+					</ul>
+				</section>
+
+				<!-- Start of a vertical slide -->
+				<section>
+					<section>
+						<h3>Theme</h3>
+						<p>Themes are fairly easy to utilize and can dramtically effect the look of your presentation.</p>
+						<p>To access them link to Reveal.js preset themes like this:</p>
+						<pre><code data-trim class="html" data-line-numbers=1,5|2-4|2|3|4><script type="text/template">
+							<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/XXXX.min.css" id="theme">
+						</script></pre></code>
+						</code></pre>
+					</section>
+
+					<section>
+						<h3>Customizing your theme</h3>
+						<p>To customize your theme, insert your theme's name after theme/ </p>
+						<p>I choose to use "moon" for this presentation, but you can find the rest of the availble themes <a href="https://revealjs.com/themes/">here.</a></p>
+					</section>
+				</section>
+				<!-- End of a vertical slide -->
+
+				<!-- Vertical slides for each topic -->
+				<section>
+					<section data-transition="fade">
+						<h3>Transitions</h3>
+						<p>Transitions are helpful for keeping the audience engaged during your presentation.</p>
+						<p>Insert them like this at the section header:</p>
+						<pre><code data-trim class="html" data-line-numbers=1,5|2-4|2|3|4><script type="text/template">
+							<section data-transition="XXXX">
+								Insert transition above
+							</section>
+						</script></pre></code>
+						</code></pre>
+					</section>
+
+					<section data-transition="slide">
+						<h3>Adjusting Transitions</h3>
+						<p>To change your transition, click this link. This will show you all of the transitions you can use to bring life to your presentation.
+					</section>
+				</section>
+			<section data-background-image = "https://media.giphy.com/media/d30mgvM8QxyQE/giphy.gif">
+				<h3>Now your presentations will be beautiful!</h3>
+			</section>
+		</div>
+	</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/notes/notes.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/markdown/markdown.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/highlight.min.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'c/t',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

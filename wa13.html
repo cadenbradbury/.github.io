@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<!--vega script -->
+		<script src="https://cdn.jsdelivr.net/npm/vega@5.19.1"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.0.0"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.15.1"></script>
+
+	</head>
+
+	<h1> Dogecoin </h1>
+	<p>As an Information Science student, I feel that my perspective on the current events in Dogecoin differs from the average person’s. Most may have been concerned about the implications on the market and making money themselves, but I thought about how this could've happened from a data point of view. I find the wallstreetbets online community particularly interesting as well as the potential to use data science to explore how this event could have happened.</p>
+	<p>Many complained that the use of an online community, like Reddit, was unethical and similar to insider trading. I would argue that talking stocks on this part of Reddit is actually similar to chatting with friends about stocks. Freedom of speech protection applies to both in person and online communities in America, so this type of stock suggestion should be legal. Since the wallstreetbets community reaches so many more people, we may need to change our legislation's view of freedom of speech. Unfortunately, many of the people making decisions for our country are too out of date to understand the complexities of the internet. I’m not sure if speech about stocks should be censored, but I do think that more content on the internet should be monitored.</p>
+	<p>I find data science the most fascinating in the realm of information science, so I would love to get my hands on some of this data. I’d like to look into some of RobinHood's data and then combine that with the rest of wall street. Obviously, there would be a large spike in Dogecoin investments by RobinHood and the stock value for these companies. It would be interesting to then go back to over significant stock events over the last few years, like Tesla. We could then see if these online communities have been influencing the market for longer than we expected. This could then urge action against these groups.</p>
+	<p>I’d also like to look further into the other forms of social media, like the tiktok community to see the infulce they may have had over so many young people purchasing Dogecoin. To do this, I could interview users to find out more. I would be interested to see how long people usually stay in the advised stocks and their insertion when investing. I wonder if people tend to invest because they want to quickly make money or if they want to boost the stocks value long term. Many feel that these online communities give the power to the people, but if everyone is looking to get in and out of the stock quickly, this accomplishes little.</p>
+	<p>I must admit that I do have some bias because I invested previously in DOGE. I also used RobinHood, which was criticized for locking users out their stocks. I feel that I was directly impacted by this unprecedented event. That being said, I am not an expert on the subject and think legislation will likely step in for the better. I do like the idea of taking billionaires money through stocks.</p>
+
+
+	<div id="ex1"></div>
+	<script type="text/javascript">
+	var spec = {
+		"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+		"width": 400,
+		"height": 400,
+		"data": {
+			"url": "https://pkgstore.datahub.io/cryptocurrency/dogecoin/dogecoin_csv/data/492e9a6143d017e8eb08c08ae0006b34/dogecoin_csv.csv"
+		},
+		"mark": "bar",
+		"encoding": {
+			"x": {
+				"timeUnit": "month",
+				"field": "date",
+				"title": "Days Since Launch of Dogecoin",
+			},
+			"y": {
+				"field": "price(USD)",
+				"type":"quantitative",
+				"title": "Price (USD)",
+			}
+		}
+	}
+	var opt = {"renderer": "canvas", "actions": false};
+	vegaEmbed("#ex1", spec, opt);
+</script>
+
+
+<div id="ex2"></div>
+<script type="text/javascript">
+var spec = {
+	"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+	"width": 400,
+	"height": 400,
+	"data": {
+		"url": "https://raw.githubusercontent.com/vega/vega-datasets/master/data/sp500.csv",
+	},
+	"mark": "bar",
+	"encoding": {
+		"x": {
+			"timeUnit": "month",
+			"field": "date",
+			"title": "Days Since Launch of Dogecoin",
+		},
+		"y": {
+			"field": "price",
+			"type":"quantitative",
+			"title": "Price (USD)",
+		}
+	}
+}
+var opt = {"renderer": "canvas", "actions": false};
+vegaEmbed("#ex2", spec, opt);
+</script>
